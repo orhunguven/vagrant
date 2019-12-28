@@ -23,6 +23,7 @@
 
     - name: Create new nginx default file
       template: src=../templates/nginx_config.jinja2 dest=/etc/nginx/sites-available/default
+      notify: Restart nginx
 
     - name: Install Python
       apt: name=python state=latest
@@ -56,11 +57,11 @@
 
     - name: Copy supervisor_config to supervisor/conf.d
       template: src=../templates/supervisor_config dest=/etc/supervisor/conf.d/supervisor-config.conf mode='0755'
-
-    - name: Restart supervisor
-      service: name=supervisor state=restarted
-      notify: Restart nginx
+      notify: Restart supervisor
 
   handlers:
     - name: Restart nginx
       service: name=nginx state=restarted
+
+    - name: Restart supervisor
+      service: name=supervisor state=restarted
