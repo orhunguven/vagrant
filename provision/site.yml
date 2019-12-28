@@ -1,0 +1,66 @@
+#playbook for ansible
+- hosts: all
+  become: yes
+  gather_facts: yes
+  become_method: sudo
+
+  tasks:
+    - name: Update Ubuntu system and services
+      apt: update_cache=yes
+
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: latest
+
+    - name: Register nginx default file's old version
+      stat: path=/etc/nginx/sites-available/default.old
+      register: default_stat
+
+    - name: Rename nginx default file
+      command: mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.old
+      when: not default_stat.stat.exists
+
+    - name: Create new nginx default file
+      template: src=../templates/nginx_config.jinja2 dest=/etc/nginx/sites-available/default
+
+    - name: Install Python
+      apt: name=python state=latest
+
+    - name: Install pip
+      apt: name=python-pip state=latest
+
+    - name: Install gunicorn
+      apt: name=gunicorn
+
+    - name: Install flask
+      pip: name=flask
+
+    - name: Install git
+      apt: name=git state=latest
+
+    - name: Create directory for git repo
+      file: path=/home/vagrant/project state=directory
+
+    - name: Clone git repo to project directory
+      git: clone=yes repo=https://github.com/orhunguven/example.git dest=/home/vagrant/project
+
+    - name: Install supervisor
+      apt: name=supervisor state=latest
+
+    - name: Create supervisor stderr log files
+      file: path=/var/log/supervisor-config.err.log state=touch mode='0755'
+
+    - name: Create supervisor stdout log files
+      file: path=/var/log/supervisor-config.out.log state=touch mode='0755'
+
+    - name: Copy supervisor_config to supervisor/conf.d
+      template: src=../templates/supervisor_config dest=/etc/supervisor/conf.d/supervisor-config.conf mode='0755'
+
+    - name: Restart supervisor
+      service: name=supervisor state=restarted
+      notify: Restart nginx
+
+  handlers:
+    - name: Restart nginx
+      service: name=nginx state=restarted

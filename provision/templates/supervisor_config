@@ -1,0 +1,8 @@
+[program:supervisor-config]
+command=gunicorn --bind 0.0.0.0:5000 wsgi:app
+directory=/home/vagrant/project/
+autostart=true
+autorestart=true
+startretries=2
+stderr_logfile=/var/log/supervisor-config.err.log
+stdout_logfile=/var/log/supervisor-config.out.log
