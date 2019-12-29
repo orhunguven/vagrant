@@ -39,4 +39,5 @@ During this process, ansible will download and configure all your needs. You don
 SEE THE RESULTS
 
 Go to your localhost:8080 via your browser, and you will see the https://github.com/orhunguven/example.git repository is running here.
+
 Note: If any code change happens in this repository, just apply vagrant reload --provision command at Vagrantfile location. You will get fully updated new version on your browser.
