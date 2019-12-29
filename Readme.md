@@ -46,4 +46,4 @@ vagrant up command triggers Vagrantfile, Vagrantfile triggers ansible and you wi
 During this process, ansible will download and configure all your needs. You don't have to do anything.
 
 Go to your localhost:8080 via your browser, and you will see the https://github.com/orhunguven/example.git repository is running here.
-If any code change happens in this repository, just apply vagrant relaod --provision command. You'll get fully updated new version on your browser.
+If any code change happens in this repository, just apply vagrant reload --provision command. You'll get fully updated new version on your browser.
