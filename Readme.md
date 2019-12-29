@@ -30,7 +30,7 @@ You need to get https://github.com/orhunguven/vagrant.git repository without cha
 
 USAGE
 
-Copy this project to a desired host system, which you installed Vagrant at previous stage.
+Copy this project to the host system, which you did required installations.
 Go to file location of the Vagrantfile on your terminal and type vagrant up.
 
 vagrant up command triggers Vagrantfile, Vagrantfile triggers ansible and you will get a Virtualbox Virtual Machine which runned by vagrant and automated by ansible.
