@@ -12,18 +12,7 @@ Ansible provision will install the packages below:
 
 This automation also downloads necessary files, repositories and places them into the required folder structures which created by ansible.
 
-Vagrant project directory tree shown below:
-
-.
-├── provision
-│   ├── site.yml
-│   └── templates
-│       ├── nginx_config.jinja2
-│       └── supervisor_config
-└── Vagrantfile
-
-2 directories, 4 files
-----------------------
+INSTALLATION
 
 First of all, you need to have Vagrant installed on your host system. Vagrant Virtual Machine will be our guest machine.
 
@@ -35,9 +24,9 @@ Second, you need to have Virtualbox installed on your host system.
 https://www.virtualbox.org/wiki/Downloads
 Go trough given link and download the Virtualbox which fits for your system properly.
 
-https://github.com/orhunguven/vagrant.git repository tree shared above. You need to get this repository without change the file hierarchy.
+You need to get https://github.com/orhunguven/vagrant.git repository without change the file hierarchy.
 
-Usage:
+USAGE
 
 Copy this project to a desired host system, which you installed Vagrant at previous stage.
 Go to file location of the Vagrantfile on your terminal and type vagrant up.
