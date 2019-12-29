@@ -23,6 +23,7 @@ If you don't have Vagrant on your host system, please follow the link above for 
 Second, you need to have Virtualbox installed on your host system.
 
 Go trough the given link below and download the Virtualbox which fits for your system properly.
+
 https://www.virtualbox.org/wiki/Downloads
 
 You need to get https://github.com/orhunguven/vagrant.git repository without change the file hierarchy.
