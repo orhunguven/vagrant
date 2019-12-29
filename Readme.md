@@ -20,7 +20,7 @@ Vagrant project directory tree shown below:
 │   └── templates
 │       ├── nginx_config.jinja2
 │       └── supervisor_config
-└── Vagrantfile 
+└── Vagrantfile
 
 2 directories, 4 files
 ----------------------
