@@ -1,7 +1,7 @@
 This project includes [Vagrant-Ansible-GitHub-Nginx-Supervisor-Gunicorn-Python] chain in general.
 
 
-Ansible provision will install the packages below:
+Ansible automation will install the packages below:
 
 - Nginx
 - Python
@@ -17,12 +17,13 @@ INSTALLATION
 First of all, you need to have Vagrant installed on your host system. Vagrant Virtual Machine will be our guest machine.
 
 https://www.vagrantup.com/docs/installation/
+
 If you don't have Vagrant on your host system, please follow the link above for information and guidance about installing Vagrant.
 
 Second, you need to have Virtualbox installed on your host system.
 
+Go trough the given link below and download the Virtualbox which fits for your system properly.
 https://www.virtualbox.org/wiki/Downloads
-Go trough given link and download the Virtualbox which fits for your system properly.
 
 You need to get https://github.com/orhunguven/vagrant.git repository without change the file hierarchy.
 
