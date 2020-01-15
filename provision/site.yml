@@ -28,8 +28,8 @@
     - name: Install Python
       apt: name=python state=latest
 
-    #- name: Install pip
-     # apt: name=python-pip state=latest
+    - name: Install pip
+      apt: name=python-pip state=latest
 
     - name: Install gunicorn
       apt: name=gunicorn
