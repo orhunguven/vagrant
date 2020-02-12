@@ -1,7 +1,7 @@
 <h2>This is a basic Ansible-Git Automation Project</h2>
 This project includes [Vagrant-Ansible-GitHub-Nginx-Supervisor-Gunicorn-Python] automation chain in general.
 
-Thanks to this automation, you can view and share changes on your flask-python application in agile way without any "works on my machine" conflict.
+Thanks to this automation, you can <b>view and share changes on your flask-python application in agile way</b> without any "works on my machine" conflict.
 This automation downloads necessary files, repositories and places them into the required folder structures, which created by ansible.
 
 Ansible automation will install the packages below:
