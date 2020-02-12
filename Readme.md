@@ -1,4 +1,4 @@
-<h3>This is a basic Ansible-Git Automation Project</h3>
+<h2>This is a basic Ansible-Git Automation Project</h2>
 This project includes [Vagrant-Ansible-GitHub-Nginx-Supervisor-Gunicorn-Python] automation chain in general.
 
 Thanks to this automation, you can view and share changes on your flask-python application in agile way without any "works on my machine" conflict.
@@ -13,7 +13,8 @@ Ansible automation will install the packages below:
 - GitHub
 - Supervisor
 
-INSTALLATION
+
+<h3>INSTALLATION</h3>
 
 First of all, you need to have Vagrant installed on your host system. Vagrant Virtual Machine will be our guest machine.
 
@@ -29,7 +30,7 @@ https://www.virtualbox.org/wiki/Downloads
 
 You need to download https://github.com/orhunguven/vagrant.git repository and store it without any change on the file hierarchy.
 
-USAGE
+<h3>USAGE</h3>
 
 1-Copy this project to the host system, which you did required installations.
 2-Go to file location of the Vagrantfile on your terminal and type vagrant up.
@@ -37,7 +38,7 @@ USAGE
 3-vagrant up command triggers Vagrantfile, Vagrantfile triggers ansible and you will get a Virtualbox Virtual Machine which runned by vagrant and automated by ansible.
 During this process, ansible will download and configure all your needs. You don't have to do anything from now on.
 
-SEE THE RESULTS
+<h3>SEE THE RESULTS</h3>
 
 Go to your localhost:8080 via your browser, and you will see the https://github.com/orhunguven/example.git repository is running here.
 
