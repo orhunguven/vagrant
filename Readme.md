@@ -1,5 +1,8 @@
-This project includes [Vagrant-Ansible-GitHub-Nginx-Supervisor-Gunicorn-Python] chain in general.
+<h3>This is a basic Ansible-Git Automation Project</h3>
+This project includes [Vagrant-Ansible-GitHub-Nginx-Supervisor-Gunicorn-Python] automation chain in general.
 
+Thanks to this automation, you can view and share changes on your flask-python application in agile way without any "works on my machine" conflict.
+This automation downloads necessary files, repositories and places them into the required folder structures, which created by ansible.
 
 Ansible automation will install the packages below:
 
@@ -9,8 +12,6 @@ Ansible automation will install the packages below:
 - Flask
 - GitHub
 - Supervisor
-
-This automation also downloads necessary files, repositories and places them into the required folder structures which created by ansible.
 
 INSTALLATION
 
@@ -26,7 +27,7 @@ Go trough the given link below and download the Virtualbox which fits for your s
 
 https://www.virtualbox.org/wiki/Downloads
 
-You need to get https://github.com/orhunguven/vagrant.git repository without change the file hierarchy.
+You need to download https://github.com/orhunguven/vagrant.git repository and store it without any change on the file hierarchy.
 
 USAGE
 
